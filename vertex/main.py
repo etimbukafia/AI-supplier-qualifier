@@ -462,11 +462,13 @@ def run_assessment(supplier_id: str, need: str):
         "metrics": metrics
     }
 
-# ─── Main ─────────────────────────────────────────────────────────────────────
-if __name__ == "__main__":
-    import sys
-    supplier_id = sys.argv[1] if len(sys.argv) > 1 else input("Supplier ID? ")
-    need = sys.argv[2] if len(sys.argv) > 2 else input("Need (e.g., 'supplying x')? ")
+def main(supplier_id: str, need: str):
+    """Main function to run the assessment."""
     logging.info(f"Running assessment for Supplier ID: {supplier_id} with Need: {need}")
     result = run_assessment(supplier_id, need)
     logging.info(f"Assessment Result: {result}")
+    return result
+    
+
+
+
