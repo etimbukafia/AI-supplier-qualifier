@@ -462,7 +462,7 @@ def run_assessment(supplier_id: str, need: str):
         "metrics": metrics
     }
 
-def main(supplier_id: str, need: str):
+def assess_risk(supplier_id: str, need: str):
     """Main function to run the assessment."""
     logging.info(f"Running assessment for Supplier ID: {supplier_id} with Need: {need}")
     result = run_assessment(supplier_id, need)
